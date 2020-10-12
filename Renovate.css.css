@@ -1,14 +1,16 @@
-.nav-wrapper {
+header {
     display: flex;
     justify-content: space-between;
-    padding: px 50;
-    font-style: Impact, sans-serif; }
-
-.Right-side {
-    font-style: Impact, sans-serif ;
-font-size: 15px;
+    font-style: Arial black;
+font-size: 17px;
+margin: 50px 100px;
 }
 
-
+.home  { 
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif ;
+}
     
     
