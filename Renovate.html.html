@@ -17,55 +17,132 @@
 
     <img src="RENOVATE.png.png" width="1350" height="650">
 
+    <!---This is my slideshow HTML-->
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="slideshow1.png" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="slideshow2.png" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="slideshow3.png" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+
+
+<!---This ends my slideshow HTML-->
 
     <section>
-        <img src="MidSection.png" usemap="#buttons"  width="1350" height="650">
+        <img src="MidSection.png" usemap="#buttons" width="1350" height="650">
         <map name="buttons">
-            <area target="_parent" alt="HTML" title="HTML" href="https://www.w3schools.com/html/default.asp" coords="221,303,221,389,305,389,307,305" shape="poly">
-            <area target="_parent" alt="CSS" title="CSS" href="https://www.w3schools.com/css/default.asp" coords="636,302,724,301,723,389,637,390" shape="poly">
-            <area target="_parent" alt="JavScript" title="JavScript" href="https://www.w3schools.com/js/default.asp" coords="1085,303,1172,303,1172,388,1085,388" shape="poly">
-            <area target="_parent" alt="Frontend" title="Frontend" href="https://www.coursereport.com/blog/front-end-development-vs-back-end-development-where-to-start" coords="220,421,307,422,308,509,221,509" shape="poly">
-            <area target="_parent" alt="Backend" title="Backend" href="https://www.coursereport.com/blog/front-end-development-vs-back-end-development-where-to-start" coords="635,423,723,422,724,508,637,506" shape="poly">
-            <area target="_parent" alt="Server" title="Server" href="https://blog.udacity.com/2014/12/front-end-vs-back-end-vs-full-stack-web-developers.html" coords="1087,420,1171,421,1172,504,1087,507" shape="poly">
+            <area target="_parent" alt="HTML" title="HTML" href="https://www.w3schools.com/html/default.asp"
+                coords="221,303,221,389,305,389,307,305" shape="poly">
+            <area target="_parent" alt="CSS" title="CSS" href="https://www.w3schools.com/css/default.asp"
+                coords="636,302,724,301,723,389,637,390" shape="poly">
+            <area target="_parent" alt="JavScript" title="JavScript" href="https://www.w3schools.com/js/default.asp"
+                coords="1085,303,1172,303,1172,388,1085,388" shape="poly">
+            <area target="_parent" alt="Frontend" title="Frontend"
+                href="https://www.coursereport.com/blog/front-end-development-vs-back-end-development-where-to-start"
+                coords="220,421,307,422,308,509,221,509" shape="poly">
+            <area target="_parent" alt="Backend" title="Backend"
+                href="https://www.coursereport.com/blog/front-end-development-vs-back-end-development-where-to-start"
+                coords="635,423,723,422,724,508,637,506" shape="poly">
+            <area target="_parent" alt="Server" title="Server"
+                href="https://blog.udacity.com/2014/12/front-end-vs-back-end-vs-full-stack-web-developers.html"
+                coords="1087,420,1171,421,1172,504,1087,507" shape="poly">
         </map>
     </section>
-        <section class="home">
 
-            <div id="profile">
-                <h1>Find RENOVATE</h1>
-                <p>On Social Media</p>
-                <div>
-                    <a href="https://www.facebook.com/"><img src="facebook.png" width="35px" height="35px"></a>
-                    <a href="https://www.instgram.com/"><img src="instagram.png" width="35px" height="35px"></a>
-                    <a href="https://www.linkedin.com/"><img src="linkedin.png" width="35px" height="35px"></a>
-                </div>
+    <section class="home">
+
+        <div id="profile">
+            <h1>Find RENOVATE</h1>
+            <p>On Social Media</p>
+            <div>
+                <a href="https://www.facebook.com/"><img src="facebook.png" width="40px" height="40px"></a>
+                <a href="https://www.instgram.com/"><img src="instagram.png" width="35px" height="35px"></a>
+                <a href="https://www.linkedin.com/"><img src="linkedin.png" width="45px" height="45px"></a>
             </div>
+        </div>
 
-            <div id="pic"></div>
-            <img src="icons.png" width="675" height="325" </div>
-            </img>
-        </section>
+        <!--- <div id="pic"></div>
+        <img src="icons.png" width="675" height="325" </div>
+        </img>
     </section>
-    <div id="form"></div>
-    <fieldset <form action="mailto:someone@example.com" method="post">
-        <h1>Contact Us</h1>
-        <label>First Name:</label><input type="text" name="name"> <br>
-        <label>Last Name:</label><input type="text" name="name"> <br>
+</section>--->
 
-        <label>Email:</label><input type="email" name="email"> <br>
-        <label>Phone:</label><input type="phone" name="phone"> <br>
-        <label>What is the Websites Purpose: </label> <br>
-        <input type="radio" name="subject" value="">
-        <label>Business</label><br>
-        <input type="radio" name="subject" value="support">
-        <label>Personal</label><br>
-        <input type="radio" name="subject" value="other">
-        <label>Other</label><br>
+        <div id="form">
+            <fieldset <form action="mailto:stewy-mac@hotmail.com" method="post">
+                <h1>Contact Us</h1>
+                <label>First Name:</label><input type="text" name="name"> <br>
+                <label>Last Name:</label><input type="text" name="name"> <br>
 
-        <label>Please explain:</label><br>
-        <textarea name="message"></textarea> <br>
-        <input type="submit" value="Submit">
-        <fieldset </form>
+                <label>Email:</label><input type="email" name="email"> <br>
+                <label>Phone:</label><input type="phone" name="phone"> <br>
+                <label>What is the Websites Purpose: </label> <br>
+                <input type="radio" name="subject" value="">
+                <label>Business</label><br>
+                <input type="radio" name="subject" value="support">
+                <label>Personal</label><br>
+                <input type="radio" name="subject" value="other">
+                <label>Other</label><br>
+
+                <label>Please explain:</label><br>
+                <textarea name="message"></textarea> <br>
+                <input type="submit" value="Submit">
+        </div>
+        </form>
+        </fieldset>
+
+        <div>
+    </section>
+
+    </section>
+
 
 </body>
 
